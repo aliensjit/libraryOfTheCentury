@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Library of the Century</title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="shortcut icon" type="image/x-icon" href="patt.png"/>
+</head>
+<body>
+	<div id='header'></div>
+	<button id='btnAdd'>Add a Book</button>
+	
+	<div id='newForm'>
+		<button id='closeForm'>Close</button>
+		<h3>New Book</h3>
+		<form id='newBook' class='form' accept-charset='utf-8'>
+			<div>
+				<label>Title</label><br/>
+					<input type='text' id='title'>
+			</div>
+			<div>				
+				<label>Author</label><br/>
+					<input type='text' id='author'>
+			</div>
+			<div>
+				<label>Summary(max of 200 letters)</label><br/>
+					<input type='text' id='summary' maxlength='200' optional>
+			</div>
+			<div>	
+				<label>Pages</label><br/>
+					<input type='number' id='pages' min='1' optional>
+			</div>
+			<div>
+				<label>
+					<input type='checkbox' name='status' id='status' value='1' style='max-width: 50px;'>Book read?</label>
+			</div>			
+			<button type='submit' id='submitBtn'>Add to Library</button>
+		</form>
+	</div>
+
+	<div id='library'><h1>Library of the Century</h1>
+		<div class='allBooks'>
+			<div id='books'></div>
+			<div id='bookInfo'>
+				<button id='closeBook'>Close Book</button>
+				<div id='bookTitle'></div>
+				<div id='bookAuthor'></div>
+				<div id='bookSummary'></div>
+				<div id='bookPages'></div>
+				<button id='bookStatus'></button><br/>
+				<button id='deleteBook'>Remove book from library</button>
+			</div>
+		</div>
+	</div>
+	<script src='script.js'></script>
+</body>
+</html>
