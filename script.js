@@ -89,6 +89,7 @@ document.onclick = e => {
 			bookTitle.textContent = currentBook.title;
 			bookAuthor.textContent = "by " + currentBook.author;
 			bookSummary.textContent = currentBook.summary;
+			bookSummary.className = "bookSummary"
 			bookPages.textContent = currentBook.pages + " pages";
 			if(currentBook.status === "false" || currentBook.status === false ){
 				bookStatus.textContent = "Not Read";
@@ -128,7 +129,7 @@ function render() {
 	for(i = myLibrary.length - 1; i >= 0; i -- ) {
 		var libraryBook = document.createElement("p");
 		libraryBook.className = "book" + i;
-		libraryBook.innerHTML = myLibrary[i].title + "<br/>";
+		libraryBook.innerHTML = `${myLibrary[i].title} <span style='float: right;'>${myLibrary[i].author}</span><br/>`;
 		library.appendChild(libraryBook);
 	}
 }
@@ -172,14 +173,14 @@ function saveToStorage() {
 
 //Adds books for default display
 function defaultBooks() {
-	createBook("Harry Potter and The Philosopher's Stone", "J.K. Rowling", "332");
-	createBook("Harry Potter and The Chamber of Secrets", "J.K. Rowling", "332");
-	createBook("Harry Potter and The Prisoner of Azkaban", "J.K. Rowling", "332");
-	createBook("Harry Potter and The Goblet of Fire", "J.K. Rowling", "332");
-	createBook("Harry Potter and The Order of the Phoenix", "J.K. Rowling", "332");
-	createBook("Harry Potter and The Half-Blood Prince", "J.K. Rowling", "332");
-	createBook("Harry Potter and The Deathly Hollows", "J.K. Rowling", "332");
-	createBook("Harry Potter and The Children of Hogwarts", "J.K. Rowling", "332");
+	createBook("Harry Potter and The Philosopher's Stone", "J.K. Rowling", "", "332");
+	createBook("Harry Potter and The Chamber of Secrets", "J.K. Rowling", "", "332");
+	createBook("Harry Potter and The Prisoner of Azkaban", "J.K. Rowling", "", "332");
+	createBook("Harry Potter and The Goblet of Fire", "J.K. Rowling", "", "332");
+	createBook("Harry Potter and The Order of the Phoenix", "J.K. Rowling", "", "332");
+	createBook("Harry Potter and The Half-Blood Prince", "J.K. Rowling", "", "332");
+	createBook("Harry Potter and The Deathly Hollows", "J.K. Rowling", "", "332");
+	createBook("Harry Potter and The Children of Hogwarts", "J.K. Rowling", "", "332");
 }
 
 //Removes book data from local storage

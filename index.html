@@ -16,11 +16,11 @@
 		<form id='newBook' class='form' accept-charset='utf-8'>
 			<div>
 				<label>Title</label><br/>
-					<input type='text' id='title'>
+					<input type='text' id='title' maxlength='50'>
 			</div>
 			<div>				
 				<label>Author</label><br/>
-					<input type='text' id='author'>
+					<input type='text' id='author' maxlength='25'>
 			</div>
 			<div>
 				<label>Summary(max of 200 letters)</label><br/>
@@ -42,13 +42,13 @@
 		<div class='allBooks'>
 			<div id='books'></div>
 			<div id='bookInfo'>
-				<button id='closeBook'>Close Book</button>
+				<button id='closeBook'><- Close Book</button>
 				<div id='bookTitle'></div>
 				<div id='bookAuthor'></div>
 				<div id='bookSummary'></div>
 				<div id='bookPages'></div>
 				<button id='bookStatus'></button><br/>
-				<button id='deleteBook'>Remove book from library</button>
+				<button id='deleteBook'><img src='sad-book.png' alt='sad book' style='max-width: 50px;'/>Remove book from library</button>
 			</div>
 		</div>
 	</div>

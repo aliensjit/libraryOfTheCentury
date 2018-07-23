@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Acme|Alegreya+Sans+SC');
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Unicase|Eczar');
 
 * {
 	margin: 0;
@@ -8,7 +8,7 @@
 
 body {
 	position: relative;
-	background: skyblue;
+	background: url(wood_tex.jpg);
 }
 
 #bookInfo:hover, #newForm:hover {
@@ -28,13 +28,15 @@ body {
 	right: 50px;
 	top: 100px;
 	position: fixed;
-	background: gray;
+	background: url(page.jpeg);
+	background-size: 100%;
 	width: 500px;
 	padding: 20px;
 	border-radius: 5px;
-	color: white;
+	color: black;
 	font-size: 20px;
-	max-height: 500px;
+	min-height: 550px;
+	max-height: 550px;
 	overflow-y: scroll;
 }
 
@@ -49,10 +51,11 @@ body {
 	border: none;
 	padding: 5px;
 	border-radius: 5px;
-	background: pink;
-	color: gray;
+	background: grey;
+	color: black;
 	width: 400px;
 	overflow: auto;
+	filter: opacity(0.8);
 }
 
 #newForm {
@@ -65,20 +68,24 @@ body {
 }
 
 #btnAdd:hover {
-	background: #ff5b5b;
-	transition: background 0.5s;
+	color: gold;
+	transition: color 0.5s;
 }
 
+#header, #btnAdd, #library h1 {
+	z-index: 99;
+}
 
 #library h1, #btnAdd{
-	font-family: Acme, sans-serif;
+	font-family: Eczar, sans-serif;
 	font-size: 40px;
-	padding: 10px;
+	padding: 2px;
 	text-align: center;
 	color: white;
-	text-shadow: 1px 1px 0 gray;
+	filter: opacity(0.7);
+	text-shadow: 1px 1px 0 black;
 	position: fixed;
-	background: #ffc759;
+	background: none;
 	border-radius: 10px;
 	border: none;
 	margin: 10px;
@@ -86,25 +93,28 @@ body {
 }
 
 #books {
-	margin: 20px;
+	margin: 100px;
 	margin-top: 95px;
+	margin-bottom: 20px;
 }
 
 #books p{
 	display: block;
-	padding: 40px;
+	padding: 30px;
 	font-size: 36px;
+	filter: brightness(90%);
 	color: white;
-	background: url(gplus.jpg);
+	text-shadow: 2px 0 2px black;
+	background: url(spine.jpg);
+	background-size: contain;
 	border-radius: 10px;
-	border: 1px solid white;
-	font-family: Alegreya Sans SC, sans-serif;
+	font-family: Cormorant Unicase, serif;
 }
 
 #books p:hover {
-	transition: filter 0.3s;
-	transition: color 0.3s;
-	filter: brightness(125%);
+	transition: color 0.5s;
+	transition: filter 0.5s;
+	filter: brightness(180%);
 	color: black;
 }
 
@@ -113,6 +123,6 @@ body {
 	height: 90px;
 	position: fixed;
 	top: 0;
-	background: skyblue;
+	background: url(wood_tex.jpg);
 }
 
